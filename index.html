@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Cutu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Touch/click hearts spawn here -->
+<div class="heart-layer" id="heartLayer" aria-hidden="true"></div>
+
+<!-- ===== FLOATING MUSIC PLAYER ===== -->
+<div class="player" id="player">
+  <button class="player-toggle" id="playerToggle" aria-label="Play song">
+    <svg class="icon-play" viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>
+    <svg class="icon-pause" viewBox="0 0 24 24" width="18" height="18" style="display:none"><path fill="currentColor" d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+  </button>
+  <div class="player-info">
+    <p class="player-title">A song for you 🎀</p>
+    <p class="player-sub">tap play</p>
+  </div>
+  <div class="player-bars" aria-hidden="true"><span></span><span></span><span></span></div>
+  <!-- Drop your audio file in audio/song.mp3 -->
+  <audio id="audioEl" src="audio/song.mp3" loop></audio>
+</div>
+
+<main>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">Two bodies, One heart &#10084;&#65039;</p>
+      <h1 class="hero-name">You &amp; I</h1>
+      <p class="hero-sub">Distance is just a number when it's us.</p>
+      <div class="hero-line" aria-hidden="true"></div>
+      <p class="hero-tagline">Every mile between us just means our love is stretching further, not thinning out.</p>
+    </div>
+    <div class="scroll-cue" aria-hidden="true">
+      <span></span>
+      <p>scroll</p>
+    </div>
+  </section>
+
+  <!-- ===== COUNTDOWN ===== -->
+  <section class="countdown-section">
+    <p class="section-kicker">Counting down to</p>
+    <h2 class="section-title">Your Birthday <span class="emoji">&#127881;</span></h2>
+    <p class=</p>
+
+    <div class="countdown" id="countdown" data-month="10" data-day="3">
+      <div class="countdown-unit">
+        <span class="countdown-num" id="cd-days">00</span>
+        <span class="countdown-label">days</span>
+      </div>
+      <div class="countdown-unit">
+        <span class="countdown-num" id="cd-hours">00</span>
+        <span class="countdown-label">hours</span>
+      </div>
+      <div class="countdown-unit">
+        <span class="countdown-num" id="cd-mins">00</span>
+        <span class="countdown-label">mins</span>
+      </div>
+      <div class="countdown-unit">
+        <span class="countdown-num" id="cd-secs">00</span>
+        <span class="countdown-label">secs</span>
+      </div>
+    </div>
+
+    <p class="countdown-arrived" id="countdownArrived" style="display:none">
+      It's here,,, Happy Birthday My love. <span class="emoji">&#127881;&#10084;&#65039;</span>
+    </p>
+  </section>
+
+  <!-- ===== LOVE LETTERS ===== -->
+  <section class="letters">
+    <p class="section-kicker">From me, to you</p>
+    <h2 class="section-title">A Few Letters <span class="emoji">&#128140;</span></h2>
+
+    <div class="letter-list">
+
+      <details class="letter-item" open>
+        <summary>
+          <span class="letter-item-title">The one about missing you</span>
+          <span class="letter-item-icon">+</span>
+        </summary>
+        <div class="letter-body">
+          <p>
+            There's a specific kind of quiet that happens after we hang up,
+            the room feels bigger somehow, like it's noticing you're not in
+            it too. I've gotten used to loving you across time zones, but I
+            don't think I'll ever get used to the ache of a good night that
+            ends in a screen going dark instead of your hand in mine.
+          </p>
+          <p>
+            Still. I'd rather love you from far away than loving anyone else
+            up close.
+          </p>
+        </div>
+      </details>
+
+      <details class="letter-item">
+        <summary>
+          <span class="letter-item-title">The one about your friends</span>
+          <span class="letter-item-icon">+</span>
+        </summary>
+        <div class="letter-body">
+          <p>
+            Let them talk. They see the distance. They don't see the 2am
+            calls, the efforts, the things we are already managing out, the
+            way we wait for months around for the ten minutes we get to talk.
+            Distance tests people. It's not testing us — it's just proving
+            what we already knew.
+          </p>
+        </div>
+      </details>
+
+      <details class="letter-item">
+        <summary>
+          <span class="letter-item-title">The one about forever</span>
+          <span class="letter-item-icon">+</span>
+        </summary>
+        <div class="letter-body">
+          <p>
+            I'm not in a hurry, because I already know how this ends — with
+            no more time zones between us. Until then, every "Good Morning"
+            and every "Good Night" is me choosing you, on purpose, every
+            single day.
+          </p>
+        </div>
+      </details>
+
+    </div>
+  </section>
+
+  <!-- ===== GALLERY ===== -->
+  <section class="Gallery">
+    <p class="section-kicker">A few of my favorite girl</p>
+    <h2 class="section-title">Watch out <span class="emoji">&#128248;</span></h2>
+
+    <div class="tabs" role="tablist" aria-label="Photo categories">
+      <button class="tab is-active" role="tab" aria-selected="true" data-tab="her">Her</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="us">Us</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="memories">Memories</button>
+    </div>
+
+    <div class="tab-panel is-active" data-panel="her">
+      <div class="gallery-grid">
+        <figure class="photo photo--a"><div class="photo-frame"><img src="photos/her-1.jpg" alt="Her" onerror="this.parentElement.classList.add('is-empty')"><div class="photo-placeholder"><span>photo</span><p>photos/her-1.jpg</p></div></div><figcaption>My favorite face👉👈</figcaption></figure>
+        <figure class="photo photo--b"><div class="photo-frame"><img src="photos/her-2.jpg" alt="Her" onerror="this.parentElement.classList.add('is-empty')"><div class="photo-placeholder"><span>photo</span><p>photos/her-2.jpg</p></div></div><figcaption>That smile🫠💞</figcaption></figure>
+        <figure class="photo photo--c"><div class="photo-frame"><img src="photos/her-3.jpg" alt="Her" onerror="this.parentElement.classList.add('is-empty')"><div class="photo-placeholder"><span>photo</span><p>photos/her-3.jpg</p></div></div><figcaption>Pure Beauty😭🎀</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="tab-panel" data-panel="us">
+      <div class="gallery-grid">
+        <figure class="photo photo--a"><div class="photo-frame"><img src="photos/us-1.jpg" alt="Us" onerror="this.parentElement.classList.add('is-empty')"><div class="photo-placeholder"><span>photo</span><p>photos/us-1.jpg</p></div></div><figcaption>Those faces have a pure glow🫣👀</figcaption></figure>
+        <figure class="photo photo--b"><div class="photo-frame"><img src="photos/us-2.jpg" alt="Us" onerror="this.parentElement.classList.add('is-empty')"><div class="photo-placeholder"><span>photo</span><p>photos/us-2.jpg</p></div></div><figcaption>Isn't this the best shot?👀👀</figcaption></figure>
+        <figure class="photo photo--c"><div class="photo-frame"><img src="photos/us-3.jpg" alt="Us" onerror="this.parentElement.classList.add('is-empty')"><div class="photo-placeholder"><span>photo</span><p>photos/us-3.jpg</p></div></div><figcaption>Us, always🫠💞</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="tab-panel" data-panel="memories">
+      <div class="gallery-grid">
+        <figure class="photo photo--a"><div class="photo-frame"><img src="photos/memory-1.jpg" alt="Memory" onerror="this.parentElement.classList.add('is-empty')"><div class="photo-placeholder"><span>photo</span><p>photos/memory-1.jpg</p></div></div><figcaption>Just a pair in love🎀</figcaption></figure>
+        <figure class="photo photo--b"><div class="photo-frame"><img src="photos/memory-2.jpg" alt="Memory" onerror="this.parentElement.classList.add('is-empty')"><div class="photo-placeholder"><span>photo</span><p>photos/memory-2.jpg</p></div></div><figcaption>A good day🤧</figcaption></figure>
+        <figure class="photo photo--c"><div class="photo-frame"><img src="photos/memory-3.jpg" alt="Memory" onerror="this.parentElement.classList.add('is-empty')"><div class="photo-placeholder"><span>photo</span><p>photos/memory-3.jpg</p></div></div><figcaption>One of the best memory 🫠🎀💞</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TIMELINE ===== -->
+  <section class="timeline-section">
+    <p class="section-kicker">How we got here</p>
+    <h2 class="section-title">Important Dates <span class="emoji">&#128197;</span></h2>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <span class="timeline-date">05/01/2026</span>
+        <p class="timeline-label">The day we met , you randomly texted me "Hii" , I replied ... Our first talk...🤧</p>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-date">07/01/2026</span>
+        <p class="timeline-label">First "I love you" ,,, I don't even know why ... But it felt right to ask you out...👉👈</p>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-date">08/01</span>
+        <p class="timeline-label">Our anniversary , Coming soon , waiting for it and wishing it to be celebrated forever... Years after years , decades after decades 🫠💞</p>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-date">Last night</span>
+        <p class="timeline-label">The last time I saw you... You were in my dreams , looking at me with those wonderful eyes , we hugged , kissed ,slept together... 🫠🎀</p>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-date">Soon</span>
+        <p class="timeline-label">The next time we'll meet up. Somewhere in private , those long kisses and hugs are waiting for us to meet 🥺🥺</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== QUOTES ===== -->
+  <section class="quotes-section">
+    <div class="quotes-glow" aria-hidden="true"></div>
+    <div class="quote-carousel" id="quoteCarousel">
+      <p class="quote-text" id="quoteText">"Distance means so little when someone means so much."</p>
+      <div class="quote-dots" id="quoteDots"></div>
+    </div>
+  </section>
+
+  <!-- ===== CLOSING ===== -->
+  <section class="closing">
+    <div class="closing-glow" aria-hidden="true"></div>
+    <p class="closing-text">Tap anywhere on this page. That's how much love is here.</p>
+    <p class="closing-sub">Here's to the day there's no distance left to talk about.</p>
+    <p class="closing-heart" aria-hidden="true">&#10022;</p>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
